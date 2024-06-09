@@ -1,6 +1,6 @@
-//
-//
-//
-//
+fn main() {
+    let mut str1 = String::from("Hello ");
+    str1.push_str("World");
 
-fn main() {}
+    println!("{:?}", str1);
+}
