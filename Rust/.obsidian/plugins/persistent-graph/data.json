@@ -1,0 +1,165 @@
+{
+  "nodePositions": [
+    {
+      "id": "Basics/Borrowing.md",
+      "x": -642.5789794921875,
+      "y": -183.61029052734375
+    },
+    {
+      "id": "Basics/Cargo.md",
+      "x": -406.2375183105469,
+      "y": 381.5630798339844
+    },
+    {
+      "id": "Basics/Compound Types.md",
+      "x": -75.12859344482422,
+      "y": 663.9739990234375
+    },
+    {
+      "id": "Basics/Data Types.md",
+      "x": -671.2456665039062,
+      "y": 87.64889526367188
+    },
+    {
+      "id": "Basics/Functions.md",
+      "x": -320.9101257324219,
+      "y": 601.0453491210938
+    },
+    {
+      "id": "Basics/General.md",
+      "x": -135.0592041015625,
+      "y": -489.8404541015625
+    },
+    {
+      "id": "Basics/Hash Map.md",
+      "x": 164.0621337890625,
+      "y": 634.8384399414062
+    },
+    {
+      "id": "Basics/Math Related Values.md",
+      "x": 201.52149963378906,
+      "y": -587.5770874023438
+    },
+    {
+      "id": "Basics/Memory Layout.md",
+      "x": -339.71612548828125,
+      "y": -603.3603515625
+    },
+    {
+      "id": "Basics/Ownership.md",
+      "x": 17.427318572998047,
+      "y": -329.2002868652344
+    },
+    {
+      "id": "Basics/Struct.md",
+      "x": -613.3582153320312,
+      "y": 343.2332763671875
+    },
+    {
+      "id": "Basics/Unit Testing/Benchmark Testing.md",
+      "x": -313.3372802734375,
+      "y": -303.3971252441406
+    },
+    {
+      "id": "Basics/Unit Testing/Integration Tests.md",
+      "x": -440.3641052246094,
+      "y": 27.43956756591797
+    },
+    {
+      "id": "Basics/Unit Testing/Unit Testing.md",
+      "x": -315.4957580566406,
+      "y": -116.37507629394531
+    },
+    {
+      "id": "Basics/Variables.md",
+      "x": -24.6336612701416,
+      "y": -692.5816650390625
+    },
+    {
+      "id": "Intermediate/Closure - Function Pointer.md",
+      "x": 596.5718994140625,
+      "y": -419.8565673828125
+    },
+    {
+      "id": "Intermediate/Combinators.md",
+      "x": 417.4067077636719,
+      "y": -382.89459228515625
+    },
+    {
+      "id": "Intermediate/Generics.md",
+      "x": 691.04248046875,
+      "y": -42.2537841796875
+    },
+    {
+      "id": "Intermediate/Intermediate.md",
+      "x": 572.918212890625,
+      "y": -213.40318298339844
+    },
+    {
+      "id": "Intermediate/IntoIterator.md",
+      "x": 446.73504638671875,
+      "y": -96.03836822509766
+    },
+    {
+      "id": "Intermediate/Iterating over Collections.md",
+      "x": -535.55908203125,
+      "y": -406.6729431152344
+    },
+    {
+      "id": "Intermediate/Iterator.md",
+      "x": 241.75460815429688,
+      "y": -217.6546630859375
+    },
+    {
+      "id": "Intermediate/Traits/Associated Traits - Generic Traits.md",
+      "x": 281.8764953613281,
+      "y": 362.8310546875
+    },
+    {
+      "id": "Intermediate/Traits/Derived Traits.md",
+      "x": 337.4883117675781,
+      "y": 66.36524200439453
+    },
+    {
+      "id": "Intermediate/Traits/Marker Traits.md",
+      "x": -20.083227157592773,
+      "y": 156.15199279785156
+    },
+    {
+      "id": "Intermediate/Traits/Super Traits.md",
+      "x": 444.8585205078125,
+      "y": 451.81988525390625
+    },
+    {
+      "id": "Intermediate/Traits/Trait Bounds.md",
+      "x": 664.0146484375,
+      "y": 289.4624328613281
+    },
+    {
+      "id": "Intermediate/Traits/Trait Objects && Dynamic Dispatch.md",
+      "x": 240.5025177001953,
+      "y": 195.92337036132812
+    },
+    {
+      "id": "Intermediate/Traits/Traits.md",
+      "x": 479.2898864746094,
+      "y": 220.45156860351562
+    },
+    {
+      "id": "Basics/Enums/Enums.md",
+      "x": -211.9010772705078,
+      "y": 177.05201721191406
+    },
+    {
+      "id": "Basics/Enums/Option.md",
+      "x": -26.42417335510254,
+      "y": -73.9548110961914
+    },
+    {
+      "id": "Basics/Enums/Result.md",
+      "x": -122.68164825439453,
+      "y": 383.31549072265625
+    }
+  ],
+  "automaticallyRestoreNodePositions": false
+}

@@ -4,119 +4,153 @@
     "type": "split",
     "children": [
       {
-        "id": "088eccae57c0405d",
+        "id": "423588f6660b3a1c",
         "type": "tabs",
         "children": [
           {
-            "id": "809c0b0be7b1e860",
+            "id": "bae04bad33d0c493",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "graph",
+              "state": {},
+              "pinned": true
+            }
+          },
+          {
+            "id": "653ac9436a466a51",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Compound Types.md",
+                "file": "Basics/Unit Testing/Unit Testing.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "e64d4c18e1047d4a",
+            "id": "99f40db736a6ae9e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Types.md",
+                "file": "Intermediate/Intermediate.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "89ef160ef0327a50",
+            "id": "b86a69bdde3efe7b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Unit Testing/Unit Testing.md",
+                "file": "Intermediate/Iterator.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "b1952f334a596707",
+            "id": "3476283bb2fa0127",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Unit Testing/Integration Tests.md",
+                "file": "Basics/Struct.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "40cd510cf020126d",
+            "id": "8269b4aad525956e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Struct.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7fe89801b9e7e8f9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Enums.md",
+                "file": "Basics/Enums/Option.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "c4e5f89c0311d3c5",
+            "id": "757426bb127e8e58",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Compound Types.md",
+                "file": "Intermediate/Memory Management/Lifetimes.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "bdc683b9bfef3263",
+            "id": "180f33098fa917fd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cargo.md",
+                "file": "Intermediate/Memory Management/Memory Management.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "c01dcc1c0648b2cf",
+            "id": "137ba0ae46cabd09",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "General.md",
+                "file": "Intermediate/Memory Management/Smart Pointers/Smart Pointers.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a9c3609c8498448d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Intermediate/Memory Management/Memory Management.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a66c29b0d2c91dc9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Intermediate/Memory Management/Smart Pointers/Box.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1862e22bc87c8412",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Basics/General.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 11
       }
     ],
     "direction": "vertical"
@@ -166,7 +200,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 329.50434494018555
   },
   "right": {
     "id": "3ba2e29e532ce947",
@@ -182,7 +216,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Types.md",
+                "file": "Basics/General.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -199,7 +233,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Types.md",
+                "file": "Basics/General.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -222,7 +256,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Types.md"
+                "file": "Basics/General.md"
               }
             }
           }
@@ -235,40 +269,54 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
+      "switcher:Open quick switcher": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false
     }
   },
-  "active": "e64d4c18e1047d4a",
+  "active": "1862e22bc87c8412",
   "lastOpenFiles": [
-    "Borrowing.md",
-    "Ownership.md",
-    "Struct.md",
-    "Math Related Values.md",
-    "General.md",
-    "Data Types.md",
-    "Compound Types.md",
-    "Hash Map.md",
-    "Unit Testing/Unit Testing.md",
-    "Unit Testing/Benchmark Testing.md",
-    "Unit Testing/Integration Tests.md",
-    "Functions.md",
-    "Enums.md",
-    "Cargo.md",
-    "Variables.md",
-    "Memory Layout.md",
-    "Unit Testing",
+    "Basics/Variables.md",
+    "Basics/Compound Types.md",
+    "Intermediate/Memory Management/Smart Pointers/Box.md",
+    "Intermediate/Memory Management/Memory Management.md",
+    "Intermediate/Memory Management/Smart Pointers/Smart Pointers.md",
+    "Intermediate/Memory Management/Smart Pointers",
+    "Intermediate/Intermediate.md",
+    "Intermediate/Memory Management/Lifetimes.md",
+    "Basics/Ownership.md",
+    "Basics/Borrowing.md",
+    "Basics/Data Types.md",
+    "Basics/Memory Layout.md",
+    "Intermediate/Closure - Function Pointer.md",
+    "Basics/Enums/Option.md",
+    "Basics/Enums/Result.md",
+    "Basics/Enums/Enums.md",
+    "Basics/Struct.md",
+    "Basics/Functions.md",
+    "Intermediate/Iterator.md",
+    "Basics/General.md",
+    "Intermediate/Memory Management",
+    "Basics/Enums",
+    "Intermediate/Combinators.md",
+    "Basics/Unit Testing/Unit Testing.md",
+    "Intermediate/Iterating over Collections.md",
+    "Intermediate/IntoIterator.md",
+    "Intermediate/Traits/Associated Traits - Generic Traits.md",
+    "Intermediate/Traits/Traits.md",
+    "Intermediate/Traits/Super Traits.md",
+    "Intermediate/Traits",
+    "Basics",
+    "Intermediate",
+    "Basics/Unit Testing",
     "Screenshot 2024-06-05 163757.png",
-    "Option.md",
     "Screenshot 2024-05-31 114606.png",
     "Screenshot 2024-05-31 114311.png",
     "Screenshot 2024-05-31 113417.png",
     "Screenshot 2024-05-31 114325.png",
-    "Screenshot 2024-05-31 113503.png",
-    "Welcome.md"
+    "Screenshot 2024-05-31 113503.png"
   ]
 }

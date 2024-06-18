@@ -36,6 +36,9 @@ assert_ne!(larger_circle.contains(&smaller_circle),
 
 // Asserts that a boolean expression is `true` at runtime.
 assert!(larger_circle.contains(&smaller_circle));
+
+// Asserts that two expressions matches
+assert!(matches!(counter.next(), Some(0))); // iterator next() result comparison
 ```
 
 *lib.rs:*
