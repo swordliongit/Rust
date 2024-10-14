@@ -1,6 +1,10 @@
 - Iterator trait lets us iterate over data collections
 - next() method must be implemented by the implementor type
 
+
+#### Useful Methods
+- ==product()== Multiplies all iterator elements
+
 ```rust
 trait Iterator {
     type Item;
@@ -54,3 +58,12 @@ fn main() {
 
 # Iterators and Options
 [[Option]]
+
+
+# Single Line Factorial
+```rust
+pub fn factorial(num: u64) -> u64 {
+    (1..=num).product()
+    // alternative : (1 .. num + 1).fold(1, |acc, x| acc * x)
+}
+```

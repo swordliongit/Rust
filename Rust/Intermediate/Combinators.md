@@ -7,6 +7,8 @@
 3. ==map()==: Takes a closure and creates an iterator which calls that closure on each element. `map()` transforms one iterator into another, by means of its argument: something that implements `FnMut`. It produces a new iterator which calls this closure on each element of the original iterator.
 4. ==collect()==: Transforms an iterator into a collection.
 5. ==sum()==: Sums the elements of an iterator. Takes each element, adds them together, and returns the result.
+6. ==take()==: Creates an iterator that yields the first `n` elements, or fewer if the underlying iterator ends sooner
+7. ==chain()==:
 ---
 
 
@@ -44,4 +46,24 @@ fn main() {
 
 ---
 
+# Creating a range and iterating over
 
+```rust
+fn main() {
+    let v: Vec<i32> = (1..).filter(|x| x % 2 == 0).take(5).collect();
+
+    println!("{:?}", v);
+}
+
+```
+
+# Chain
+- Combines 2 iterators and provides an iterator over all of the items of them
+
+```rust
+let product_iterator = products.iter().chain(some_product.iter());
+
+for product in product_iterator {
+	println!("{}", product);
+}
+```

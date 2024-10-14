@@ -17,8 +17,7 @@ fn main() {
 }
 ```
 
-## Associated Values of Variants
-
+# Associated Values of Variants
 ```rust
 enum TravelType {
     Car(f32),
@@ -44,6 +43,48 @@ fn main() {
     );
 }
 ```
+
+# Printing Enums
+```rust
+#[derive(Debug)]
+enum Message {
+    // TODO: define a few types of messages as used below
+    Quit,
+    Echo,
+    Move,
+    ChangeColor,
+}
+
+fn main() {
+    println!("{:?}", Message::Quit);
+    println!("{:?}", Message::Echo);
+    println!("{:?}", Message::Move);
+    println!("{:?}", Message::ChangeColor);
+}
+```
+
+
+# Struct Variant
+```rust
+#[derive(Debug)]
+enum Message {
+    // TODO: define the different variants used below
+    Move { x: u32, y: u32 },
+    Echo(String),
+    ChangeColor(u32, u32, u32),
+    Quit,
+}
+
+fn main() {
+	let messages = [
+		Message::Move { x: 10, y: 30 },
+		Message::Echo(String::from("hello world")),
+		Message::ChangeColor(200, 255, 255),
+		Message::Quit,
+	];
+}
+```
+
 
 # Standard Library Enums
 [[Option]]

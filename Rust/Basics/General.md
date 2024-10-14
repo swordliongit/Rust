@@ -1,3 +1,5 @@
+1. String slices have inherent &'static lifetime
+
 # 1. ==Code blocks== can be assigned to variables and they can return values
 ```rust
 let name = {
@@ -57,12 +59,24 @@ let c = MSG;
 let d = MSG;
 ```
 
+# 7. System Time
+```rust
+use std::time::{SystemTime, UNIX_EPOCH};
+
+fn main() {
+    match SystemTime::now().duration_since(UNIX_EPOCH) {
+        Ok(n) => println!("1970-01-01 00:00:00 UTC was {} seconds ago!", n.as_secs()),
+        Err(_) => panic!("SystemTime before UNIX EPOCH!"),
+    }
+}
+```
 
 # Useful Functions
 
 ## Char
 - is_alphabetic()
 - is_numeric()
+- as_str() : Chars iterator -> &str
 ```rust
 let my_first_initial = 'C';
     if my_first_initial.is_alphabetic() {
@@ -72,4 +86,24 @@ let my_first_initial = 'C';
     } else {
         println!("Neither alphabetic nor numeric!");
     }
+```
+
+## String and &str
+- ==repeat()==
+```rust
+fn main() {
+    let hello = String::from("hello");
+    let world_repeated = &"world".repeat(5); // & is appended to the output of repeat(), not the "world"
+    let hello_world = hello + world_repeated;
+
+    println!("{hello_world}"); // helloworldworldworldworldworld
+}
+```
+- ==to_owned()==
+- ==to_string()== : &str -> String
+- ==chars()==: Returns an iterator over the chars of a string slice.
+- ==last()==: Consumes the iterator, returning the last element.
+```rust
+let str = "Test string";
+let ch = str.chars().last().unwrap();
 ```

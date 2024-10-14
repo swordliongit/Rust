@@ -1,35 +1,29 @@
 //
 //
 //
-//  Box Pointer
+//  Reference Counting Smart Pointer
 //
 //
-//
-struct HugeData;
-struct SmallData;
 
-trait Storage {}
-impl Storage for HugeData {}
-impl Storage for SmallData {}
+use std::rc::Rc;
+
+enum List {
+    Cons(i32, Option<Rc<List>>),
+    Nil,
+}
+
 fn main() {
-    let data_1 = HugeData;
-    let data_2 = Box::new(HugeData);
-
-    let data_3 = data_1; // entire data is copied, it's on stack
-    let data_4 = data_2; // only the pointer itself is copied that is on stack,
-                         // not the data on heap.
-
-    let data_5 = Box::new(SmallData);
-
-    /*
-    Error in adding data_5 to the vector:
-    mismatched types expected struct `Box<HugeData>`
-    found struct `Box<SmallData>`
-
-    Solution: Use trait objects to tell the compiler that this vector has items that implement
-    the Storage trait.
-    */
-    // let data = vec![Box::new(data_3), data_4, data_5];
-
-    let data: Vec<Box<dyn Storage>> = vec![Box::new(data_3), data_4, data_5];
+    let a = Rc::new(List::Cons(1, Some(Rc::new(List::Cons(2, None))))); // first reference to this heap location
+    println!("Reference count after a: {}", Rc::strong_count(&a));
+    {
+        let b = List::Cons(3, Some(Rc::clone(&a))); // a is borrowed, this clone is not a deep copy,
+                                                    // it increments the reference counts of a, now it's 2
+        println!("Reference count after b: {}", Rc::strong_count(&a));
+        let c = List::Cons(4, Some(Rc::clone(&a))); // a is borrowed again, count is 3
+        println!("Reference count after c: {}", Rc::strong_count(&a));
+    }
+    println!(
+        "Reference count after inner scope: {}",
+        Rc::strong_count(&a)
+    );
 }

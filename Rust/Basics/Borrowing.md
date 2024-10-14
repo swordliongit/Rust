@@ -27,7 +27,9 @@ fn borrows_vector(vec: &Vec<i32>) { // vector is borrowed, no extra heap space t
 }
 ```
 
-## Dereferencing
+---
+
+# Dereferencing
 ```rust
 fn main() {
     let mut data = 100;
@@ -37,7 +39,9 @@ fn main() {
 }
 ```
 
-## Can't move out of mutable references
+---
+
+# Can't move out of mutable references
 ```rust
 fn main() {
     let mut heap_data = vec![1, 200, 232];
@@ -47,7 +51,9 @@ fn main() {
 }
 ```
 
-## Multiple Redirection
+---
+
+# Multiple Redirection
 ```rust
 let s1: String = String::from("Hello");
 let r1: &String = &s1;
@@ -55,3 +61,46 @@ let r2: &&String = &r1;
 let r3: &&&String = &r2;
 println!("{}", { ***r3 == "Hello".to_string() }); // true
 ```
+
+---
+
+# Partial move in Match, Ref
+```rust
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+fn main() {
+    let y: Option<Point> = Some(Point { x: 100, y: 200 });
+
+    match y {
+        Some(p) => println!("Co-ordinates are {},{} ", p.x, p.y),
+        _ => panic!("no match!"),
+    }
+    // Use y here
+    let try_y = y; // Error, use of partially moved value: `y`
+// partial move occurs because value has type `Point`, which does not implement the `Copy` trait
+}
+```
+
+#### Solution:
+
+```rust
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+fn main() {
+    let y: Option<Point> = Some(Point { x: 100, y: 200 });
+
+    match y {
+        Some(ref p) => println!("Co-ordinates are {},{} ", p.x, p.y),
+        _ => panic!("no match!"),
+    }
+    let try_y = y;
+}
+```
+
+---

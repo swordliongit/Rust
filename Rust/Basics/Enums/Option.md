@@ -6,8 +6,7 @@
 ---
 1. is_some()
 2. unwrap() : Returns the contained `Some` value, consuming the `self` value.
-3. iter().chain()
-4. flatten()  : Clears None variants in a vector of Options
+3. flatten()  : Clears None variants in a vector of Options
 ---
 
 
@@ -43,7 +42,7 @@ fn main() {
 ```
 
 
-## Destructuring Option Variants - if let
+# Destructuring Option Variants - if let
 - Good if we care about only 1 variant and discard all others
 
 ```rust
@@ -88,16 +87,6 @@ fn main() {
 products.extend(some_product);
 ```
 
-## Chain
-- Combines 2 iterators and provides an iterator over all of the items of them
-
-```rust
-let product_iterator = products.iter().chain(some_product.iter());
-
-for product in product_iterator {
-	println!("{}", product);
-}
-```
 
 ---
 
@@ -134,3 +123,45 @@ println!("{:?}", filtered_products);
 ```
 
 ---
+
+# Nested Options
+
+```rust
+```rust
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn simple_option() {
+        let target = "rustlings";
+        let optional_target = Some(target);
+
+        // TODO: Make this an if let statement whose value is "Some" type
+        if let Some(word) = optional_target {
+            assert_eq!(word, target);
+        }
+    }
+
+    #[test]
+    fn layered_option() {
+        let range = 10;
+        let mut optional_integers: Vec<Option<i8>> = vec![None];
+
+        for i in 1..(range + 1) {
+            optional_integers.push(Some(i));
+        }
+
+        let mut cursor = range;
+
+        // TODO: make this a while let statement - remember that vector.pop also
+        // adds another layer of Option<T>. You can stack `Option<T>`s into
+        // while let and if let.
+        while let Some(Some(integer)) = optional_integers.pop() {
+            assert_eq!(integer, cursor);
+            cursor -= 1;
+        }
+
+        assert_eq!(cursor, 0);
+    }
+}
+```
+```

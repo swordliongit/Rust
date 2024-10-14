@@ -10,9 +10,20 @@ fn main() {
 ```
 
 ## Getting a value, get()
+- get() returns an Option wrapping a reference to the value.
 ```rust
 println!("The age is {:?}", person.get("Lion").unwrap());
 // unwrap() Returns the contained `Ok` value, consuming the `self` value.
+```
+
+```rust
+let mut hmap: HashMap<&str, i32> = HashMap::new();
+
+hmap.insert("first", 10);
+hmap.insert("second", 100);
+
+let felement = *hmap.get("first").unwrap(); // felement is i32
+let felement = hmap.get("first").unwrap(); // felement is &i32
 ```
 
 ## Checking for a key, contains_key()

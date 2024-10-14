@@ -1,6 +1,6 @@
 1. Box is similar to unique_ptr in C++
 
-## Problem:
+# Problem:
 #### Idea is to have lists that contain other lists in the program below.
 
 #### ==Error==: recursive type `List` has infinite size.
